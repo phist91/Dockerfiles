@@ -5,7 +5,7 @@
 
 FROM debian:latest
 LABEL maintainer="p.st@wwu.de"
-COPY texlive.profile /
+COPY texlive-full-minted/texlive.profile /
 ARG TLSETUP_PATH=http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 # Basic system and Python / Pygments setup
 RUN apt-get update -y \
