@@ -2,7 +2,8 @@ FROM phist91/texlive-full-minted:latest
 LABEL maintainer="p.st@wwu.de"
 
 # Installing JDK 11 and Maven
-RUN apt-get install -y curl openjdk-11-jdk maven git
+RUN apt-get update -y \
+    && apt-get install -y curl openjdk-11-jdk maven git
 
 # Installing Gitlab Runner
 RUN curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | bash \
