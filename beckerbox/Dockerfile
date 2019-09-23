@@ -1,3 +1,7 @@
+# Jonas Becker's very own Docker container for testing purposes made for the
+# project course "Geometriebasierte Entscheidungsunterstützung in der
+# forensischen Chemometrie", winter semester 2019/20.
+
 FROM phist91/texlive-full-minted:latest
 LABEL maintainer="p.st@wwu.de"
 

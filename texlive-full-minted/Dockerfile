@@ -20,6 +20,7 @@ RUN apt-get update -y \
         ghostscript \
     && pip3 install Pygments \
     && rm -rf /var/lib/apt/lists/*
+	
 # Installing TeX Live
 RUN wget $TLSETUP_PATH \
     && tar xzvf install-tl-unx.tar.gz \
