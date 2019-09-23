@@ -7,6 +7,6 @@ LABEL maintainer="p.st@wwu.de"
 
 # Installing Gitlab Runner
 RUN apt-get update -y \ 
-    && apt-get-install -y curl \
+    && apt-get install -y curl \
     && curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | bash \
     && apt-get install -y gitlab-runner
