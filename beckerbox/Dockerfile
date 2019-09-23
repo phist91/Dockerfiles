@@ -14,12 +14,12 @@ RUN curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runne
     && apt-get install -y gitlab-runner
 
 # Installing SSH server
-ENV NOTVISIBLE "in users profile"
-RUN apt-get install -y openssh-server \
-    && mkdir /var/run/sshd \
-    && echo 'root:PASSWORD' | chpasswd \
-    && sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config \
-    && sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd \
-    && echo "export VISIBLE=now" >> /etc/profile
-EXPOSE 22
-CMD ["/usr/sbin/sshd", "-D"]
+# ENV NOTVISIBLE "in users profile"
+# RUN apt-get install -y openssh-server \
+#    && mkdir /var/run/sshd \
+#    && echo 'root:PASSWORD' | chpasswd \
+#    && sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config \
+#    && sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd \
+#    && echo "export VISIBLE=now" >> /etc/profile
+# EXPOSE 22
+# CMD ["/usr/sbin/sshd", "-D"]
