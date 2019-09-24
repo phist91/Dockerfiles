@@ -9,5 +9,5 @@ RUN apt-get update -y \
 
 # Installing Gitlab Runner
 RUN curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | bash \
-    && apt-get install -y gitlab-runner
+    && apt-get install -y gitlab-runner \
     && rm -rf /var/lib/apt/lists/*
