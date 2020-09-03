@@ -19,7 +19,7 @@ RUN apt-get update -y \
     && pip install Pygments
 
 # Installing TeX Live
-COPY texlive-full-minted/texlive.profile /
+COPY texlive.profile /
 ARG TLSETUP_PATH=http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 RUN wget $TLSETUP_PATH \
     && tar xzvf install-tl-unx.tar.gz \
